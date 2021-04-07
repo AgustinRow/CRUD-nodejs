@@ -10,6 +10,7 @@ In this app you can add, edit, and delete book. It does not check for duplicates
 
 - Nodejs: Express
 - Templating: Embedded JS templating
+- Styling: Bootstrap
 - DataBase: MySQL
 - ORM: Sequelize
 
