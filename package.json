@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "migrate": ""
+    "migrate": "npx sequelize-cli db:migrate --url 'mysql://username:password@host/database_name'"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -21,6 +21,8 @@
     "sequelize": "^6.5.0"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "i": "^0.3.6",
+    "npx": "^10.2.2"
   }
 }

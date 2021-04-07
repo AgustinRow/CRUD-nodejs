@@ -1,10 +1,10 @@
 # CRUD with NodeJs + Express
 
-Simple CRUD app designed with MVC pattern (only for practice purpose)
+Simple CRUD app designed with MVC pattern.
 
 ## App
 
-In this app you can add, edit, and delete book. It does not check for duplicates
+In this app you can add, edit, and delete book. It does not check for duplicates.
 
 ## Tools
 
@@ -15,6 +15,12 @@ In this app you can add, edit, and delete book. It does not check for duplicates
 
 ## Run the app
 
+- Database migration:
+
+`npm migrate`
+
+\*\* make sure to have installed sequelize-cli and npx
+
 - For running the app:
 
-npm start
+`npm start`
