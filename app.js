@@ -6,11 +6,11 @@ var logger = require("morgan");
 
 var flash = require("express-flash");
 var session = require("express-session");
-var mysql = require("mysql");
-var connection = require("./lib/db");
+//var mysql = require("mysql");
+//var connection = require("./lib/db");
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+//var indexRouter = require("./routes/index");
+//var usersRouter = require("./routes/users");
 var booksRouter = require("./routes/books");
 
 var app = express();
@@ -37,8 +37,8 @@ app.use(
 
 app.use(flash());
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
+//app.use("/", indexRouter);
+//app.use("/users", usersRouter);
 app.use("/books", booksRouter);
 
 // catch 404 and forward to error handler
