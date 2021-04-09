@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "migrate": "npx sequelize-cli db:migrate --url 'mysql://username:password@host/database_name'"
+    "migrate": "npx sequelize-cli db:migrate"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
+    "cookie-session": "^1.4.0",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
@@ -18,11 +19,13 @@
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
+    "passport-google-oauth20": "^2.0.0",
     "sequelize": "^6.5.0"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
     "i": "^0.3.6",
-    "npx": "^10.2.2"
+    "npx": "^3.0.0",
+    "passport": "^0.4.1"
   }
 }

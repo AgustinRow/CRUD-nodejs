@@ -18,9 +18,9 @@ In this app you can add, edit, and delete book. It does not check for duplicates
 
 - Database migration:
 
-`npm migrate`
+`npm run migrate`
 
-\*\* make sure to have installed sequelize-cli and npx
+\*\* make sure to set your credentials properly
 
 - For running the app:
 

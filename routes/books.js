@@ -3,7 +3,16 @@ var router = express.Router();
 const model = require("../lib/models");
 const controller = require("../resources/book");
 
-//TODO: check error when responding an sequelize promise
+//login check
+const isLoggedIn = (req, res, next) => {
+  if (req.user) {
+    next();
+  } else {
+    res.sendStatus(401);
+  }
+};
+
+//TODO: check error when responding a sequelize promise
 router.get("/", function (req, res, next) {
   model.book.findAll().then((response) => {
     try {
@@ -18,7 +27,7 @@ router.get("/", function (req, res, next) {
 });
 
 // display add book page
-router.get("/add", function (req, res, next) {
+router.get("/add", isLoggedIn, function (req, res, next) {
   res.render("books/add", {
     name: "",
     author: "",

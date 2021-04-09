@@ -6,15 +6,21 @@ var logger = require("morgan");
 
 var flash = require("express-flash");
 var session = require("express-session");
-//var mysql = require("mysql");
-//var connection = require("./lib/db");
 
-//var indexRouter = require("./routes/index");
-//var usersRouter = require("./routes/users");
-var booksRouter = require("./routes/books");
+const booksRouter = require("./routes/books");
+const authRouter = require("./routes/auth");
+const passport = require("passport");
+require("./passport-setup");
+const cookieSession = require("cookie-session");
 
 var app = express();
 
+app.use(
+  cookieSession({
+    name: "mikroways-challenge",
+    keys: ["key1", "key2"],
+  })
+);
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -36,10 +42,11 @@ app.use(
 );
 
 app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 
-//app.use("/", indexRouter);
-//app.use("/users", usersRouter);
 app.use("/books", booksRouter);
+app.use("/google", authRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
