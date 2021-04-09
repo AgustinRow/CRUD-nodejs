@@ -6,6 +6,8 @@ Simple CRUD app designed with MVC pattern.
 
 In this app you can add, edit, and delete book. It does not check for duplicates.
 
+This app provides a single sign-on using OAuth from google. It will authorize acces to the "Add Book" module.
+
 ## Tools
 
 - Nodejs: Express
@@ -13,6 +15,7 @@ In this app you can add, edit, and delete book. It does not check for duplicates
 - Styling: Bootstrap
 - DataBase: MySQL
 - ORM: Sequelize
+- Authentication: OAuth with Passport(authentication middleware for Node)
 
 ## Run the app
 
