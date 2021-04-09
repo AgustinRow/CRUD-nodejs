@@ -19,12 +19,16 @@ This app provides a single sign-on using OAuth from google. It will authorize ac
 
 ## Run the app
 
-- Database migration:
+- Settings:
+
+`cp .env.sample .env`
+
+- Installation and data base migration:
 
 `npm run migrate`
 
 \*\* make sure to set your credentials properly
 
-- For running the app:
+- Run the app:
 
 `npm start`
