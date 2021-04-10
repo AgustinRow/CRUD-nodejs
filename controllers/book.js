@@ -135,7 +135,7 @@ const deleteBook = async (req, res) => {
   });
 };
 
-var controller = {
+const controller = {
   renderABookById,
   addBook,
   getAllBooks,
